@@ -4,9 +4,9 @@ const bodyParser = require("body-parser");
 const flight = require("./routes/flightRoute");
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 
-// app.use(express.json())
+app.use(express.json())
 
 app.use("/flight", flight)
  

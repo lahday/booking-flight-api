@@ -45,10 +45,10 @@ exports.createFlight= async (req, res) => {
         const {email, name, title, price}= await req.body
         const newFlight = {
             id: uuid(),
-            name: req.body.name,
-            email :req.body.email,
-            title : req.body.title,
-            price : req.body.price,
+            name,
+            email,
+            title,
+            price,
             time: new Date().toLocaleTimeString(),
             date: new Date().toLocaleDateString(),
         } ; 
